@@ -116,7 +116,7 @@ const iconDisplay = (data) => {
 		btnInput.style.backgroundColor = '#8e44ad';
 	} else {
 		dayOrNight = false;
-		document.body.style.backgroundImage = 'linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),url("./images/night.jpg")';
+		document.body.style.backgroundImage = 'linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, 1)),url("./images/night.jpg")';
 		headline.style.backgroundColor = '#1976D2';
 		myLocation.style.backgroundColor = '#2196F3';
 		btnInput.style.backgroundColor = '#2196F3';
