@@ -1,0 +1,28 @@
+/*======CONTROL BUTTONS==========*/
+
+.temp-toggle {
+	margin: 1rem 0;
+	font-size: 1.5rem;
+}
+
+.celcius, .farenheit {
+	font-weight: 300;
+	transition: text-shadow 0.3s;
+}
+
+.celcius:hover, .farenheit:hover {
+	cursor: pointer;
+	border-bottom: 1px solid #fff;
+}
+
+.celcius:active, .farenheit:active {
+	font-weight: 700;
+}
+
+.selected {
+	font-weight: 700;
+	text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+}
+
+
+

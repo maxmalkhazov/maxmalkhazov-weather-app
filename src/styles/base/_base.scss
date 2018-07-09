@@ -1,0 +1,41 @@
+@import "mixins";
+@import "variables";
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+body {
+	box-sizing: border-box;
+	padding: 0 0 1.875rem 0;
+	// background: url(https://images.unsplash.com/photo-1505699261378-c372af38134c?auto=format&fit=crop&w=1500&q=80);
+    background-size: cover no-repeat;
+    background-position: center no-repeat; 
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: Roboto, Arial, sans-serif;
+    text-align: center;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+::selection {
+	background-color: $color-main;
+	color: $color-white;
+}
+
+@media only screen and (max-width: 767px) {
+
+	body {background-size: auto; background-position: center;}
+}
+
+
+

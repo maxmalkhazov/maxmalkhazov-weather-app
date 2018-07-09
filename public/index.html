@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<title>Weather App</title>
+</head>
+<body>
+	
+	<div>
+		<h1 class="headline">The Weather App</h1>
+		<div class="temp-toggle">
+			<span class="celcius">C&deg</span>/
+			<span class="farenheit"> F&deg</span>
+		</div>
+	</div>
+	
+	<div class="user-input">
+		<button class="my-location">Use My Location</button>
+		<p class="input-city">Or Enter City: </p>
+		<input type="text" class="user-location-input">
+		<button class="btn-input">Submit</button>
+	</div>
+	
+	<div class="loader">
+		<img class="loader__img" src="/images/loader.gif"/>
+	</div>
+	
+	<div class="app">
+		<h3 class="loc"><span class="output-location"></span></h3>
+		<div class="display">
+			<div class="temp">
+				<span class="output-temp"></span> &deg; <span class="temp-format"></span>
+			</div>
+			<p class="description">
+				<i id="clearsky" class="ion-ios-sunny-outline"></i>
+				<i id="few-clouds" class="ion-ios-partlysunny-outline"></i>
+				<i id="clouds" class="ion-ios-cloudy-outline"></i>
+				<i id="rain" class="ion-ios-rainy-outline"></i>
+				<i id="storm" class="ion-ios-thunderstorm-outline"></i>
+				<i id="snow" class="ion-ios-snowy"></i>
+				<i id="night-clearsky" class="ion-ios-moon-outline"></i>
+				<i id="night-clouds" class="ion-ios-cloudy-night-outline"></i>
+				<i id="wind" class="ion-flag"></i>
+				<i id="mist" class="ion-ios-drag"></i>
+				<span class="output-desc"></span>
+			</p>
+		</div>
+		<div class="weather-main">
+			<div class="minmax">
+				<div class="weather-main--info">
+					<i class="ion-arrow-graph-up-right"></i><span id="max-temp" class="far cel output-max-temp"></span>&deg;
+					<i class="ion-arrow-graph-down-right"></i><span id="min-temp" class="far cel output-min-temp"></span>&deg;
+				</div>
+			</div>
+			<div class="wind">
+				<div class="weather-main--info">
+					<i class="ion-flag"></i>
+					<span class="output-wind"></span>
+					<span class="mph-kph"></span>
+				</div>
+			</div>
+			<div class="humidity">
+				<div class="weather-main--info">
+					<i class="ion-waterdrop"></i>
+					<span class="output-humidity"></span>
+				%</div>
+			</div>
+		</div>
+		<div class="weather-additional">
+			<p class="sunrise">
+				<i class="ion-ios-arrow-thin-up"></i>
+				<i class="ion-ios-sunny"></i>
+				<span class="output-sunrise"></span>
+			</p>
+			<p class="sunset">
+				<i class="ion-ios-arrow-thin-down"></i>
+				<i class="ion-ios-sunny"></i>
+				<span class="output-sunset"></span>
+			</p>
+		</div>
+	</div>
+	
+	
+	
+	<script type="text/javascript" src="/scripts/bundle.js"></script>
+
+</body>
+</html>
