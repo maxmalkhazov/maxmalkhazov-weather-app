@@ -19,7 +19,7 @@
 	<div class="user-input">
 		<button class="my-location">Use My Location</button>
 		<p class="input-city">Or Enter City: </p>
-		<input type="text" class="user-location-input">
+		<input type="text" id="autocomplete" class="user-location-input">
 		<button class="btn-input">Submit</button>
 	</div>
 	
@@ -85,6 +85,14 @@
 	
 	
 	<script type="text/javascript" src="/scripts/bundle.js"></script>
+	<script type="text/javascript">
+		function activatePlacesSearch() {
+			const input = document.querySelector('#autocomplete');
+			const autocomplete = new google.maps.places.Autocomplete(input);
+		}
+	</script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFE0v6pBQJLefOCxH3SdbZLKP7lBonhTg&libraries=places&callback=activatePlacesSearch"></script>
+
 
 </body>
 </html>

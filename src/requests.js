@@ -9,6 +9,7 @@ const btnCelcius = document.querySelector(".celcius");
 const mphKph = document.querySelector(".mph-kph");
 const outputSunrise = document.querySelector(".output-sunrise");
 const outputSunset = document.querySelector(".output-sunset");
+const app = document.querySelector('.app');
 
 const getCurrentLocation = () => new Promise((res, rej) => {
 	navigator.geolocation.getCurrentPosition((pos) => {
@@ -23,6 +24,8 @@ const getUserInputLocation = async (userInput) => {
 	if (response.status === 200) {
 		const data = await response.json();
 		return data;
+	} else {
+		throw new Error('Unable to get location data');
 	}
 }
 
@@ -32,7 +35,7 @@ const inputLocation = async () => {
 		lat = data.coords.latitude;
 		long = data.coords.longitude;
 	}).catch((err) => {
-		console.log(err)
+		alert('Please allow location services on your device');
 	});
 	
 	const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&appid=34fb6e34f6b56c480b19f84502d25032`);
@@ -67,7 +70,8 @@ const userInput = async (inputLocation) => {
 		sunrisestr = sunrise.toUTCString();
 		sunsetstr = sunset.toUTCString();
 	}).catch((err) => {
-		console.log(err);
+		// app.innerHTML = '<h3>Invalid input</h3>';
+		alert('Invalid city name');
 	});
 	
 	const response = await fetch(`https://maps.googleapis.com/maps/api/timezone/json?location=${lat},${long}&timestamp=1331161200&key=AIzaSyAraYpKJY-RQjtaXMfEuXED_AJBsSJqCEA`);
