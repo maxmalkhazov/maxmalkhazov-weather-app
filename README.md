@@ -2,6 +2,9 @@
 
 *A responsive app that uses an API to retrieve real-time weather data based on user’s location or preset preferences.* 
 
-## Copyright and attribution
+## Built With
+JavaScript, HTML5, CSS3, SASS/SCSS, Webpack, Babel, Moment.js.
 
-Copyright (c) 2018 Maxim Malkhazov. Released under the [MIT License]().
+## API's Used
+* Used to retrieve weather data - https://openweathermap.org/current
+* Used to set timezone according to location - https://developers.google.com/maps/documentation/timezone/intro
